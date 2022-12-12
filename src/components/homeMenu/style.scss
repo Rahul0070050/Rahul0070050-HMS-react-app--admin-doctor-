@@ -1,0 +1,56 @@
+.menu-items {
+    overflow-x: hidden;
+    text-align: center;
+    width: 25rem;
+    margin: 0 3rem;
+    .profile {
+        opacity: 0;
+        background-color: gainsboro;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    .item {
+        background-color: gainsboro;
+        margin: 2rem 0;
+        padding: 1rem 2rem;
+        text-align: center;
+        width: 100%;
+        border-radius: 10px;
+        opacity: 0;
+    }
+    .profile{
+        animation: item-right-to-left forwards 1s ease-in-out 0.2s;
+    }
+    .item-1{
+        animation: item-right-to-left forwards 1s ease-in-out 0.5s;
+    }
+    .item-2{
+        animation: item-right-to-left forwards 1s ease-in-out 0.9s;
+    }
+    .item-3{
+        animation: item-right-to-left forwards 1s ease-in-out 1s;
+    }
+    .item-4{
+        animation: item-right-to-left forwards 1s ease-in-out 1.2s;
+    }
+    .item-5{
+        animation: item-right-to-left forwards 1s ease-in-out 1.5s;
+    }
+    .item-6{
+        animation: item-right-to-left forwards 1s ease-in-out 1.9s;
+    }
+    .item-7{
+        animation: item-right-to-left forwards 1s ease-in-out 2s;
+    }
+}
+
+@keyframes item-right-to-left {
+    0% {
+        opacity: 0;
+        margin-left: 10rem;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
