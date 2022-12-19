@@ -1,0 +1,21 @@
+.chat-help-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 1.5rem;
+
+    span{
+        width: fit-content;
+        border: 1px solid #8f8aff;
+        padding: 0.4rem;
+        color: #8f8aff;
+        margin: 0.4rem 0.2rem;
+        border-radius: 7px;
+        transition: all ease-in-out 0.4s;
+        cursor: pointer;
+        &:hover {
+            background-color: #8f8aff;
+            color: white;
+        }
+    }
+}

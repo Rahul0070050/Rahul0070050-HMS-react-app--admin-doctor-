@@ -1,0 +1,48 @@
+.appoinment-card {
+    width: 15rem;
+    padding: 1rem;
+    position: relative;
+    margin: 0.4rem;
+    display: inline-block;
+}
+
+.card-animation {
+    opacity: 0;
+    animation: appoinments-bottum-to-top 0.3s ease-in-out forwards;
+}
+
+.dropdown-options {
+    right: 2rem;
+    top: 4rem;
+    position: absolute;
+    display: flex;
+    width: 8rem;
+    flex-direction: column;
+    z-index: 3;
+
+    button {
+        padding: 0.4rem 2rem;
+    }
+}
+
+.display {
+    opacity: 2;
+    z-index: 2;
+}
+
+.hidde {
+    opacity: 0;
+    z-index: -1;
+}
+
+
+@keyframes appoinments-bottum-to-top {
+    0% {
+        transform: translateY(5rem);
+    }
+    
+    100% {
+        transform: translateY(0);
+        opacity: 5;
+    }
+}

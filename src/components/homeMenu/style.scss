@@ -12,11 +12,22 @@
     .item {
         background-color: gainsboro;
         margin: 2rem 0;
-        padding: 1rem 2rem;
         text-align: center;
         width: 100%;
         border-radius: 10px;
         opacity: 0;
+        padding: 1rem 2rem;
+        transition: all ease-in-out 0.2s;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .active {
+        .item {
+            color: white;
+            background-color: rgb(83, 82, 82);
+        }
     }
     .profile{
         animation: item-right-to-left forwards 1s ease-in-out 0.2s;

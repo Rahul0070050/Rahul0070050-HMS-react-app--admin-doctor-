@@ -1,0 +1,13 @@
+.login {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .login-container {
+        padding: 1rem 2rem;
+        background-color: #a7d4ff;
+        border-radius: 10px;
+    }
+}

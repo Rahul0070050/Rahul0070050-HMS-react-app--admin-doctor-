@@ -1,0 +1,23 @@
+.apoinments {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 1.3rem;
+    }
+    .todays, .pending {
+        margin: 1rem;
+        background-color: gainsboro;
+        border-radius: 10px;
+        padding: 0.5rem 0.77rem;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .todays {
+        height: 30rem;
+    }
+    .pending {
+        height: 15rem;
+    }
+}

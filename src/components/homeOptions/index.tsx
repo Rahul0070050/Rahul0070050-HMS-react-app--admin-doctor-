@@ -6,12 +6,11 @@ import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 
 import './style.scss'
 
-function HomeOptions(prop:{getComponent:(val:String) => void}) {
-    const {getComponent} = prop
+function HomeOptions() {
     return (
         <div className='home-options'>
             <div className="left-1">
-                <div className="card" onClick={() => getComponent('todo')}>
+                <div className="card">
                     <PlaylistAddCheckIcon sx={{ fontSize: '6rem' }} />
                 </div>
                 <div className="card">
