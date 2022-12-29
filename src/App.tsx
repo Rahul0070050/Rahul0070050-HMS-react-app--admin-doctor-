@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Home from './pages/home';
-import Appointments from './components/home/appointments'
+import DoctorHome from './pages/doctor/home';
+import AdminHome from './pages/admin/home';
+import Appointments from './components/doctor/home/appointments'
 import Login from './pages/login'
 // import TodoList from './components/todos'
 import './App.scss';
@@ -12,7 +13,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/login' element={<Login />} />
-        <Route path='/' element={<Home />}>
+        <Route path='/admin' element={<AdminHome />} />
+        <Route path='/doctor' element={<DoctorHome />}>
           <Route index element={<Appointments />} />
         </Route>
         {/* <Route path='/docters' element={}> */}

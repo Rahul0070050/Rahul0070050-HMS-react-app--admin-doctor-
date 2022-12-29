@@ -1,6 +1,7 @@
+import React, { useState } from 'react'
 import { Chat, Close, SendRounded } from '@mui/icons-material'
 import { ButtonBase, Card, CardContent } from '@mui/material'
-import React, { useState } from 'react'
+
 import ChatHelpOptions from '../chatHelpOptions'
 import ChatText from '../chatText'
 

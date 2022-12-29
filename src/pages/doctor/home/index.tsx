@@ -1,7 +1,8 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import HomeMenu from '../../components/home/homeMenu'
-import HomeOptions from '../../components/home/homeOptions'
+
+import HomeMenu from '../../../components/doctor/home/homeMenu'
+import HomeOptions from '../../../components/doctor/home/homeOptions'
 
 
 import './style.scss'
