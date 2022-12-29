@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/home';
-import Appointments from './components/appointments'
+import Appointments from './components/home/appointments'
 import Login from './pages/login'
-import TodoList from './components/todos'
+// import TodoList from './components/todos'
 import './App.scss';
 
-function App() {
+function App() {  
   return (
     <BrowserRouter>
       <Routes>

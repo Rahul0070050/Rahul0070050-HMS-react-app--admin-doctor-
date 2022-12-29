@@ -5,6 +5,7 @@ import ChatHelpOptions from '../chatHelpOptions'
 import ChatText from '../chatText'
 
 import './style.scss'
+
 function ChatPopUp() {
     const [closeChat, setCloseChat] = useState(false)
     return (

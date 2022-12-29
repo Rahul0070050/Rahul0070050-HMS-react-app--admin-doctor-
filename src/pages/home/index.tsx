@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Outlet } from 'react-router-dom'
-import HomeMenu from '../../components/homeMenu'
-import HomeOptions from '../../components/homeOptions'
+import HomeMenu from '../../components/home/homeMenu'
+import HomeOptions from '../../components/home/homeOptions'
 
 
 import './style.scss'

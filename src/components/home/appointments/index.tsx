@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AppoinmentCard from '../appoinmentCards'
-import appointments from '../../utils/appoinments.json'
+import appointments from '../../../utils/appoinments.json'
 
 import './style.scss'
 import { TextField } from '@mui/material'

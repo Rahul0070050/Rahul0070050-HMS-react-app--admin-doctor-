@@ -4,10 +4,103 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #0073cf;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: 0;
+    }
+    .login-outer-container {
+        background-color: gainsboro;
+        z-index: 2;
+        border-radius: 10px;
+    }
 
     .login-container {
+        position: relative;
+        width: 80rem;
+        height: 43rem;
+        margin: 0.5rem;
         padding: 1rem 2rem;
-        background-color: #a7d4ff;
+        background-color: white;
+        display: flex;
         border-radius: 10px;
+        z-index: 2;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            top: 0;
+            border-radius: 10px 0 0 10px;
+            overflow: hidden;
+            background-color: #0073cf;
+            left: 0;
+            z-index: 0;
+        }
+
+        .background-image {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center !important;
+        }
+        form {
+            width: 50%;
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .welcome, .welcome-text {
+                text-align: center;
+                margin-top: 1rem;
+            }
+            .welcome {
+                margin-top: 4rem;
+            }
+            &>span{
+                margin-bottom: 1rem;
+            }
+            .form {
+                margin-top: 1rem;
+                width: 18rem;
+                display: flex;
+                flex-direction: column;
+                .welcome-text {
+                    margin-top: 1rem;
+                }
+                .warning {
+                    color: red;
+                }
+                button {
+                    cursor: pointer;
+                    margin-top: 0.3rem;
+                    padding: 0.5rem;
+                    font-size: larger;
+                    font-weight: 600;
+                    border-radius: 10px;
+                    border: none;
+                    color: #0073cf;
+                    box-shadow: 1px 2px 3px 2px gainsboro;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        background-color: #0073cf;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .select-role {
+            position: absolute;
+            bottom: 2rem;
+            right: 3rem;
+        }
     }
 }

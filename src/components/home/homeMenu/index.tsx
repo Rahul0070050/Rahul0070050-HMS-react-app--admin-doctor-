@@ -4,7 +4,7 @@ import { FormLabel } from '@mui/material';
 
 
 import './style.scss'
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function HomeMenu() {
   return (

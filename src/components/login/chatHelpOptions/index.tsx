@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './style.scss'
+
 function ChatHelpOptions() {
     return (
         <div className='chat-help-options'>

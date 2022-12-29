@@ -4,7 +4,6 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useTransition, animated } from 'react-spring'
 
 import './style.scss'
-import { Pending } from '@mui/icons-material';
 
 type data = {
     id: String;
