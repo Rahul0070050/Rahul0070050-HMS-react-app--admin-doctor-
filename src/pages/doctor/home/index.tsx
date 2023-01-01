@@ -9,7 +9,7 @@ import './style.scss'
 
 function Home() {
   return (
-    <div className='home'>
+    <div className='doctor-home'>
       <div className="options" data-testid="options">
         <HomeOptions />
       </div>

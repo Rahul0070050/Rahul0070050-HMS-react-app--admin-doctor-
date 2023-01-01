@@ -1,0 +1,12 @@
+.admin-docters-list {
+    height: 90vh;
+    padding: 0.3rem;
+    .doctors-list {
+        margin: 1rem 0;
+        overflow-y: auto;
+        height: 80vh;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

@@ -7,13 +7,18 @@ import Appointments from './components/doctor/home/appointments'
 import Login from './pages/login'
 // import TodoList from './components/todos'
 import './App.scss';
+import Charts from './components/admin/Charts';
+import Doctors from './pages/admin/doctors';
 
 function App() {  
   return (
     <BrowserRouter>
       <Routes>
+        <Route path='/' element={<AdminHome />}>
+          <Route index element={<Charts />}/>
+          <Route path='/doctors' element={<Doctors />}/>
+        </Route>
         <Route path='/login' element={<Login />} />
-        <Route path='/admin' element={<AdminHome />} />
         <Route path='/doctor' element={<DoctorHome />}>
           <Route index element={<Appointments />} />
         </Route>
