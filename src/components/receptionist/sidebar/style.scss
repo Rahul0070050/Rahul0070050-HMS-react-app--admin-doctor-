@@ -1,0 +1,31 @@
+.receptionist-sidebar {
+    width: 24rem;
+    height: 94vh;
+    border-radius: 0;
+    background-color: #0f141b !important;
+    color: white;
+
+    p {
+        text-align: center;
+        padding: 1rem 0;
+        // background-color: white;
+        border-bottom: 4px solid white;
+        font-weight: 600;
+        font-size: larger;
+        &:hover>a {
+            opacity: 1;
+            margin-left: 1rem;
+        }
+        
+        a {
+            opacity: 0.7;
+            color: white !important;
+            text-decoration: none;
+            transition: all ease-in-out 0.4s;
+            &:hover {
+                opacity: 1;
+                margin-left: 1rem;
+            }
+        }
+    }
+}

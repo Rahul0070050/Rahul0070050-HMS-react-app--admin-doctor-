@@ -1,17 +1,31 @@
 import React, { ChangeEvent, useState } from 'react'
-import { Checkbox, FormControlLabel, ListItem, TextField } from '@mui/material';
+import {useNavigate} from 'react-router-dom'
+import { Card, Checkbox, FormControlLabel, ListItem, TextField } from '@mui/material';
+import { AxiosError } from 'axios';
 
 import Background from '../../components/login/background';
 import ChatPopUp from '../../components/login/chatPop-up'
 import LoginBackgroundImage from '../../images/loginpage-image.svg'
 
+import useRequest from '../../hooks/useRequest';
+
 import './style.scss'
-import { authRequest } from '../../hooks/authRequest';
 
 function Login() {
+  const { request } = useRequest()
+  const location = useNavigate()
+
   const [userData, setuserData] = useState({ username: '', password: '' })
   const [userDataErr, setuserDataErr] = useState({ username: false, password: false })
-  const [role, setRole] = useState('Doctor')
+  const [role, setRole] = useState('Admin')
+  const [message, setMessage] = useState<String>('')
+
+  function shoMessage(msg: String) {
+    setMessage(msg)
+    setInterval(() => {
+      setMessage('')
+    }, 10000)
+  }
   function handleOnchange(e: ChangeEvent<HTMLInputElement>) {
     setuserData(prev => {
       return {
@@ -22,7 +36,7 @@ function Login() {
   }
 
   function handleSubmit() {
-    if(!userData.username || !userData.password) {
+    if (!userData.username || !userData.password) {
       setuserDataErr(prev => {
         return {
           ...prev,
@@ -32,13 +46,37 @@ function Login() {
       })
       return
     }
-    authRequest.post('/admin',{...userData,role}).then(res => {
-      console.log(res);
-      console.log(res.data);
-      localStorage.setItem('hms-jwt',`${res.data.token}`)
-    }).catch(err => {
-      console.log(err.message);
-    })
+
+    if (role === 'Doctor') {
+      request.post('/doctor/login', { ...userData, role }).then((res: any) => {
+        localStorage.setItem('doctor-jwt', `${res.data.token}`)
+        location('/doctor')
+      }).catch((err: AxiosError) => {
+        const msg: { msg: String } = err.response?.data as { msg: String }
+        shoMessage(msg?.msg)
+      })
+    }
+
+    if (role === 'Receptionist') {
+      request.post('/receptionist/login', { ...userData, role }).then((res: any) => {
+        localStorage.setItem('receptionist-jwt', `${res.data.token}`)
+        location('/receptionist')
+      }).catch((err: AxiosError) => {
+        const msg: { msg: String } = err.response?.data as { msg: String }
+        shoMessage(msg?.msg)
+      })
+    }
+
+    if (role === 'Admin') {
+      request.post('/admin/login', { ...userData, role }).then((res: any) => {
+        localStorage.setItem('admin-jwt', `${res.data.token}`)
+        location('/')
+      }).catch((err: AxiosError) => {
+        const msg: { msg: String } = err.response?.data as { msg: String }
+        shoMessage(msg?.msg)
+      })
+    }
+
   }
   return (
     <div className='login'>
@@ -70,6 +108,9 @@ function Login() {
           </div>
         </div>
       </div>
+      <Card className={`login-message ${message && 'message'}`}>
+        {message && message}
+      </Card>
       <ChatPopUp />
     </div>
   )

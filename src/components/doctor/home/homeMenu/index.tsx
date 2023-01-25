@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { FormLabel } from '@mui/material';
 
 
 import './style.scss'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function HomeMenu() {
+  const location = useNavigate()
+  useEffect(() => {
+    const doctor = localStorage.getItem('doctor-jwt')
+    if(!doctor) {
+      location('/login')
+    }
+  }, [])
   return (
     <div>
       <div className="menu-items">

@@ -1,12 +1,12 @@
 import React from 'react'
-import { Button, Card, Paper, Typography } from '@mui/material'
+import { Button, Card, Typography } from '@mui/material'
 
 import './style.scss'
 
 function Reports() {
   return (
     <Card className='admin-reports'>
-      <Typography sx={{ m: '1rem', fontSize: '1.5rem', fontWeight: '700' }}>
+      <Typography sx={{ m: '1.5rem', fontSize: '1.5rem', fontWeight: '700',position:'fixed' }}>
         Reports
       </Typography>
       <div className="reports">

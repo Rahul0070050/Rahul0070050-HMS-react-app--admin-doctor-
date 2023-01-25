@@ -1,0 +1,25 @@
+.receptionist-top-cards {
+    display: flex;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 1rem;
+    justify-content: space-evenly;
+
+    .top-card {
+        color: black;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        background-color: #FEF9EF !important;
+        padding: 0.7rem 2rem;
+        width: 27rem;
+        position: relative;
+
+        .icon {
+            position: absolute;
+            top: 3rem;
+            right: 1rem;
+        }
+    }
+}

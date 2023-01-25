@@ -16,6 +16,23 @@
         background-color: white;
         z-index: 0;
     }
+    .login-message {
+        position: absolute;
+        width: 30rem;
+        background-color: rgba(255, 0, 0, 0.407);
+        z-index: 5;
+        text-align: center;
+        padding: 1rem;
+        bottom: 0;
+        border: 1px solid red;
+        display: none;
+        font-size: xx-large;
+        font-family: sans-serif;
+        font-weight: 600;
+    }
+    .message {
+        display: block;
+    }
     .login-outer-container {
         background-color: gainsboro;
         z-index: 2;

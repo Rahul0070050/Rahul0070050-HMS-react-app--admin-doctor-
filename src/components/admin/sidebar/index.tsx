@@ -1,10 +1,19 @@
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Card, Typography } from '@mui/material'
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import './style.scss'
 
 function Sidebar() {
+  const location = useNavigate()
+  useEffect(() => {
+    const doctor = localStorage.getItem('admin-jwt')
+    if(!doctor) {
+      location('/login')
+    }
+  }, [])
+
   return (
     <Card className='admin-sidebar'>
       <Card>
@@ -19,9 +28,6 @@ function Sidebar() {
         </div>
       </Card>
       <Card className='options'>
-      {/* <Typography sx={{ padding: '1rem' }}>
-        <strong><h2>Options</h2></strong>
-      </Typography> */}
         <Typography className="link">
           <NavLink to="/">
             <h4>
@@ -30,42 +36,42 @@ function Sidebar() {
           </NavLink>
         </Typography>
         <Typography className="link">
-          <NavLink to="/doctors">
+          <NavLink to="/admin/doctors">
             <h4>
               <strong>Doctors</strong>
             </h4>
           </NavLink>
         </Typography>
         <Typography className="link">
-          <NavLink to="/doctor">
+          <NavLink to="/admin/receptionists">
             <h4>
-            <strong>Receptionist</strong>
+              <strong>Receptionist</strong>
             </h4>
           </NavLink>
         </Typography>
         <Typography className="link">
-          <NavLink to="/patients">
+          <NavLink to="/admin/patients">
             <h4>
               <strong>Patients</strong>
             </h4>
           </NavLink>
         </Typography>
         <Typography className="link">
-          <NavLink to="/doctor">
+          <NavLink to="/admin/doctor">
             <h4>
               <strong>Chat</strong>
             </h4>
           </NavLink>
         </Typography>
         <Typography className="link">
-          <NavLink to="/doctor">
+          <NavLink to="/admin/doctor">
             <h4>
               <strong>Ty</strong>
             </h4>
           </NavLink>
         </Typography>
         <Typography className="link">
-          <NavLink to="/doctor">
+          <NavLink to="/admin/doctor">
             <h4>
               <strong>Ty</strong>
             </h4>

@@ -1,0 +1,22 @@
+.department-single-card {
+    padding: 1rem !important;
+    margin: 1rem !important;
+    width: 23rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    background-color: #fff !important;
+    color: black !important;
+    position: relative;
+    .icon {
+        position: absolute;
+        right: 1rem;
+        top: 1.6rem;
+    }
+    .info {
+        margin: 0.4rem 0 0 0.5rem;
+        text-align: start;
+    }
+}

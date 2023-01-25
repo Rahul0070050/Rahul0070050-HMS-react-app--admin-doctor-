@@ -1,4 +1,5 @@
 .admin-docters-list {
+    position: relative !important;
     height: 90vh;
     padding: 0.3rem;
     .doctors-list {
@@ -8,5 +9,26 @@
         &::-webkit-scrollbar {
             display: none;
         }
+    }
+    .alert {
+        position: absolute !important;
+        width: 70rem;
+        bottom: -3rem;
+        text-align: center;
+        padding: 1rem;
+        z-index: 2;
+        display: none;
+    }
+    .success {
+        background-color: rgba(55, 255, 0, 0.65);
+        border: 2px solid green;
+        bottom: -0.5rem;
+        display: block;
+    }
+    .error {
+        background-color: rgba(255, 0, 0, 0.65);
+        border: 2px solid red;
+        bottom: -0.5rem;
+        display: block;
     }
 }

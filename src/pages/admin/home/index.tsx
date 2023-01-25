@@ -9,10 +9,10 @@ import './style.scss'
 function Home() {
     const location = useNavigate()
     useEffect(() => {
-        // const login = localStorage.getItem('doctor-login')
-        // if(!login) {
-        //     location('/login')
-        // }
+        const login = localStorage.getItem('admin-jwt')
+        if(!login) {
+            location('/login')
+        }
     }, [])
     return (
         <div className='admin-home'>
